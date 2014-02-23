@@ -35,12 +35,12 @@
 {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
     [super viewDidLoad];
-    [self updateValues];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.tipControl setSelectedSegmentIndex:[SettingsViewController getDefaultPercentageIndex]];
+    [self updateValues];
 }
 
 - (void)didReceiveMemoryWarning
